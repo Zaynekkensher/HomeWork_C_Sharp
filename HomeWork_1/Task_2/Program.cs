@@ -11,10 +11,9 @@
 
  if (Number1 > Number2)
  {
-     max = Number1;
+    Console.WriteLine("Число " + Number1 + " больше числа " + Number2);
  }
  else
  {
-     max = Number2;
+    Console.WriteLine("Число " + Number2 + " больше числа " + Number1);
  }
- Console.WriteLine("max " + max);
