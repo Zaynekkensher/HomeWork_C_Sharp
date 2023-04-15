@@ -1,45 +1,49 @@
-﻿//Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат
-//точек в этой четверти (x и y).
-
-int EnterData(string text)
+﻿// C# program to check whether a number
+// is Palindrome or not.
+ 
+using System;
+class GFG
 {
-    Console.WriteLine(text);
-    return (int.Parse(Console.ReadLine()));
+    /* Iterative function to reverse digits of num*/
+    static int reverseDigits(int num)
+    {
+        int rev_num = 0;
+        while (num > 0) {
+            rev_num = rev_num * 10 + num % 10;
+            num = num / 10;
+        }
+        return rev_num;
+    }
+     
+    /* Function to check if n is Palindrome*/
+    static int isPalindrome(int n)
+    {
+     
+        // get the reverse of n
+        int rev_n = reverseDigits(n);
+     
+        // Check if rev_n and n are same or not.
+        if (rev_n == n)
+            return 1;
+        else
+            return 0;
+    }
+     
+    /*Driver program to test reverseDigits*/
+    public static void  Main()
+    {
+        int n = 4562;
+        Console.WriteLine("Is " + n + " a Palindrome number? -> " +
+            (isPalindrome(n) == 1 ? "true" : "false"));
+     
+        n = 2002;
+         
+        Console.WriteLine("Is " + n + " a Palindrome number? -> " +
+            (isPalindrome(n) == 1 ? "true" : "false"));
+ 
+    }
+ 
 }
-
-
-int chetvr = EnterData("Введите значение четверти: ");
-
-if (chetvr == 1)
-{
-    Console.WriteLine("В первой четверти - x > 0 y > 0");
-}
-
-if (chetvr == 2)
-{
-    Console.WriteLine("Во второй четверти - x < 0 y > 0");
-}
-
-if (chetvr == 3)
-{
-    Console.WriteLine("В третьей четверти - x < 0 y < 0");
-}
-if (chetvr == 3)
-{
-    Console.WriteLine("В четвертой четверти - x > 0 y < 0");
-}
-
-
-
-// a = int(input('Введите номер четверти в которой бы хотели узнать диапозон возможных координат: '));
-
-// if a == 1:
-//     EnterData('В первой четверти - x > 0 y > 0');
-// elif a == 2:
-//     EnterData('Во второй четверти - x < 0 y > 0');
-// elif a == 3:
-//     EnterData('В третьей четверти - x < 0 y < 0');
-// elif a == 4:
-//     EnterData('В четвертой четверти - x > 0 y < 0');
-// else:
-//     EnterData('Такой четверти нет :(');
+ 
+// This code is contributed
+// by Hritik Raj ( ihritik )
