@@ -15,5 +15,5 @@ int number = EnterData("Введите число N: ");
 
 for (int i = 1; i <= number; i++)
 { 
-    Console.Write($"{number} -> {(Math.Pow(i, 3))}, ");
+    Console.Write($"{(Math.Pow(i, 3))} ");
 }
