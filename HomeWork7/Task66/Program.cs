@@ -2,8 +2,8 @@
 
  Console.Clear();
 
- double m = EnterNumbers("Enter m: ");
- double  n = EnterNumbers("Eneter n: ");
+ double m = EnterNumbers("Введите m: ");
+ double  n = EnterNumbers("Введите n: ");
  double  temp = m;
 
  if (m > n) 
